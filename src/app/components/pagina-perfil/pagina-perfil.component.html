@@ -1,0 +1,172 @@
+<body>
+    <h2 class="h2minhaconta" style="text-align: center;">Minha Conta</h2>
+    <main class="flex-fill mb-4">
+        <div class="container">
+
+            <div class="row gx-3">
+
+                <div class="col-4">
+                    <div class="list-group margin-perfil" style="border-radius: 10px;">
+                        <a style="cursor: pointer;" (click)="switchForm('DadosPessoais')" [ngClass]="{'bg-danger text-light': changeForm === 'DadosPessoais'}" class="list-group-item list-group-item-action">
+                            <i class="bi-person fs-6"></i> Dados Pessoais
+                        </a>
+                        <a style="cursor: pointer;" (click)="switchForm('Pedidos')" [ngClass]="{'bg-danger text-light': changeForm === 'Pedidos'}" class="list-group-item list-group-item-action">
+                            <i class="bi-truck fs-6"></i> Pedidos
+                        </a>
+                        <a style="cursor: pointer;" (click)="switchForm('AlterarSenha')" [ngClass]=" { 'bg-danger text-light': changeForm==='AlterarSenha' } " class="list-group-item list-group-item-action ">
+                            <i class="bi-lock fs-6 "></i> Alterar Senha
+                        </a>
+                        <a style="cursor: pointer; " class="list-group-item list-group-item-action ">
+                            <i class="bi-door-open fs-6 "></i> Sair
+                        </a>
+                    </div>
+                </div>
+                <div class="col-8 " style="padding-left: 6em; ">
+                    <div class="row" *ngIf="changeForm === 'Pedidos'">
+                        <div class="d-flex flex-column col-sm-12 col-md-8">
+                            <fieldset class="row-gx-3">
+                                <div class="row gx-3">
+                                    <div class="col-12 margin-perfil">
+                                        <div class="accordion" id="divPedidos" *ngFor="let prod of produtos">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" (click)="prod.activeToggle = !prod.activeToggle" type="button" data-bs-toggle="collapse" data-bs-target="#pedido000010">
+                                                        <b>Pedido {{ prod.numeroPedido }}</b>
+                                                        <span class="mx-1">(realizado em {{prod.dataPedido}})</span>
+                                                    </button>
+                                                </h2>
+                                                <div id="pedido000010" class="accordion-collapse" [ngClass]="{'collapse': prod.activeToggle}" data-bs-parent="#divPedidos">
+                                                    <div class="accordion-body">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Produto</th>
+                                                                    <th class="text-end">R$ Unit.</th>
+                                                                    <th class="text-center">Qtde.</th>
+                                                                    <th class="text-end">Subtotal</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody *ngFor="let item of prod.produtos">
+                                                                <tr>
+                                                                    <td>{{item.nomeProduto}}</td>
+                                                                    <td class="text-end">{{item.valorUnitProduto}}</td>
+                                                                    <td class="text-center">{{item.quantidadeProduto}}
+                                                                    </td>
+                                                                    <td class="text-end">{{item.valorTotal}}</td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <th class="text-end" colspan="3">Valor dos Produtos:
+                                                                    </th>
+                                                                    <td class="text-end">{{prod.valorTotalProdutos}}
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="text-end" colspan="3">Valor do Frete:
+                                                                    </th>
+                                                                    <td class="text-end">{{prod.valorFrete}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="text-end" colspan="3">Valor a Pagar:
+                                                                    </th>
+                                                                    <td class="text-end">{{prod.valorTotalComFrete}}
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="text-end" colspan="3">Forma de Pagamento:
+                                                                    </th>
+                                                                    <td class="text-end">{{prod.FormaPagamento}}</td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="row" *ngIf="changeForm === 'AlterarSenha'">
+                        <div class="d-flex flex-column col-sm-12 col-md-8 ">
+                            <form>
+                                <fieldset class="row-gx-3 ">
+                                    <div class="form-floating mb-3 col-md-6 col-xl-6 ">
+                                        <input class="form-control form-radius " type="text " id="txtSenhaAntiga " placeholder=" " autofocus=" ">
+                                        <label for="txtNome ">Senha Antiga</label>
+                                    </div>
+                                    <div class="form-floating mb-3 col-md-6 col-xl-6 ">
+                                        <input class="form-control form-radius " type="text " id="txtSenhaNova " placeholder=" ">
+                                        <label for="txtCPF ">Senha Nova</label>
+                                    </div>
+                                    <div class="form-floating mb-3 col-md-6 col-xl-6 ">
+                                        <input class="form-control form-radius " type="text " id="txtreSenhaNova " placeholder=" ">
+                                        <label for="txtCPF ">Confirmar Senha Nova</label>
+                                    </div>
+                                </fieldset>
+                                <a class="btn btn1 btn-primary buttonform m-lg-6 ">Alterar Senha</a>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row" *ngIf="changeForm === 'DadosPessoais'">
+                        <div class="col-sm-12 col-md-8 ">
+                            <fieldset class="row gx-3 ">
+                                <legend style="font-size:18px ">Dados Pessoais</legend>
+                                <div class="form-floating mb-3 ">
+                                    <input class="form-control form-radius " type="text " id="txtNome " placeholder=" " autofocus=" ">
+                                    <label for="txtNome ">Nome</label>
+                                </div>
+                                <div class="form-floating mb-3 col-md-6 col-xl-4 ">
+                                    <input class="form-control form-radius " type="text " id="txtCPF " placeholder=" ">
+                                    <label for="txtCPF ">CPF</label>
+                                </div>
+                                <div class="form-floating mb-3 col-md-6 col-xl-6 ">
+                                    <input class="form-control form-radius " type="date " id="txtDataNascimento " placeholder=" ">
+                                    <label for="txtDataNascimento " class="d-inline d-sm-none d-md-inline d-lg-none ">Data
+                                        Nascimento</label>
+                                    <label for="txtDataNascimento " class="d-none d-sm-inline d-md-none d-lg-inline ">Data
+                                        de Nasc.</label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend style="font-size:18px ">Contatos</legend>
+                                <div class="form-floating mb-3 col-md-8 ">
+                                    <input class="form-control form-radius " type="email " id="txtEmail " placeholder=" ">
+                                    <label for="txtEmail ">E-mail</label>
+                                </div>
+                                <div class="form-floating mb-3 col-md-6 ">
+                                    <input class="form-control form-radius " placeholder=" " type="text " id="txtTelefone ">
+                                    <label for="txtTelefone ">Telefone</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-sm-12 col-md-6 ">
+                            <fieldset class="row gx-3 ">
+                                <legend style="font-size:18px ">Endereço</legend>
+                                <div class="form-floating mb-3 col-md-6 col-lg-6 '">
+                                    <input class="form-control form-radius" type="text" id="txtCEP" placeholder=" ">
+                                    <label for="txtCEP">CEP</label>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="form-floating mb-3 col-md-4">
+                                    <input class="form-control form-radius" type="text" id="txtNumero" placeholder=" ">
+                                    <label for="txtNumero">Número</label>
+                                </div>
+                                <div class="form-floating mb-3 col-md-8">
+                                    <input class="form-control form-radius" type="text" id="txtComplemento" placeholder=" ">
+                                    <label for="txtComplemento">Complemento</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control form-radius" type="text" id="txtReferencia" placeholder=" ">
+                                    <label for="txtReferencia">Referência</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

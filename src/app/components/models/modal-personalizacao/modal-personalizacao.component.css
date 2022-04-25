@@ -1,0 +1,70 @@
+#flowercase {
+    width: 200px !important;
+    height: 200px !important;
+    border: solid 1px black;
+    border-radius: 20px;
+}
+
+.img-div-pers {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.svg-pers {
+    text-decoration: none;
+    color: #48be44;
+}
+
+.svg-pers:hover {
+    color: #4d7a20;
+}
+
+.svg-pers1 {
+    text-decoration: none;
+    color: #e43c3c;
+}
+
+.svg-pers1:hover {
+    color: #a01a1a;
+}
+
+.marg-editar-pers {
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    #menulateral {
+        display: flex;
+        flex-direction: row !important;
+        margin-bottom: 20px;
+    }
+    .caseitens {
+        display: flex;
+        flex-direction: column !important;
+    }
+    .input-pers {
+        display: inline-flexbox;
+        border-radius: 14px;
+        border: solid 1px rgb(56, 55, 55);
+        width: 100%;
+        list-style: none;
+    }
+    .personaliza-flores-add {
+        object-fit: cover;
+        border-radius: 8px;
+        margin-top: 20px;
+        width: 70px;
+        height: 70px
+    }
+    .td-pers {
+        margin: 0 15px;
+    }
+    .container-fluid {
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+    }
+}

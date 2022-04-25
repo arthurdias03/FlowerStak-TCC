@@ -1,0 +1,70 @@
+<!--sobre nos-->
+<div style="justify-content: center; align-items: center;">
+    <div class="container sobre-nos">
+        <h3 class=" h3-banner text-center container-fluid"><strong>Sobre a Flower Stak</strong></h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#da0c0c" class="bi bi-shop" viewBox="0 0 16 16">
+            <path
+                d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
+        </svg>
+        <br>
+        <br>
+        <h5>Floricultura com loja na cidade de Santos-SP, inauguramos no ano de 2021 com o intuito de inovar o setor de venda de flores.</h5>
+    </div>
+
+    <!--div quem somos-->
+    <div class="container padding-sobre">
+        <div class="row d-flex justify-content-between col-sm-12">
+            <div class="col-lg-3 col-sm-3 div-sobre-nos box1">
+                <h2>Quem <span>Somos?</span></h2>
+                <h4>Floricultura com ideias novas feitas para suprir a ideia do mercado. <br> Somos uma equipe jovem com a mente no futuro. </h4>
+            </div>
+            <div class="col-lg-3 col-sm-3 div-sobre-nos box1">
+                <h2><span>Missão</span></h2>
+                <h4>Prover produtos e serviços com alta qualidade e estilo próprio, garantindo a excelência no atendimento ao cliente.</h4>
+            </div>
+            <div class="col-lg-3 col-sm-3 div-sobre-nos box1">
+                <h2><span>Valores</span></h2>
+                <h4>Eficiência e qualidade, nós temos excelência em confiabildiade e rapidez em sua entrega.<br>Nós somos uma empresa que supera a expectativa de seus clientes.</h4>
+            </div>
+        </div>
+        <hr class="hr2">
+    </div>
+
+    <!--duvidas frequentes-->
+    <main>
+        <h2 class="text-center" style="margin-bottom: 60px;margin-top: 80px;">DÚVIDAS FREQUENTES</h2>
+        <div class="container" style="margin-bottom: 30px;">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="cursorlink nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link menu-ajuda" [ngClass]="{active: editForm === 'edit1'}" (click)="changeInformations('edit1')" id="v-pills-home-tab" aria-selected="true">Como
+                            comprar</a>
+                        <a class="cursorlink nav-link menu-ajuda" [ngClass]="{active: editForm === 'edit2'}" (click)="changeInformations('edit2')" id="v-pills-profile-tab" data-toggle="pill" role="tab" aria-controls="v-pills-profile" aria-selected="false">Sobre nós</a>
+                        <a class="cursorlink nav-link menu-ajuda" [ngClass]="{active: editForm === 'edit3'}" (click)="changeInformations('edit3')" id="v-pills-messages-tab" data-toggle="pill" role="tab" aria-controls="v-pills-messages" aria-selected="false">Como ter contato
+                            conosco</a>
+                        <a class="cursorlink nav-link menu-ajuda" [ngClass]="{active: editForm === 'edit4'}" (click)="changeInformations('edit4')" id="v-pills-settings-tab" data-toggle="pill" role="tab" aria-controls="v-pills-settings" aria-selected="false">Meios de pagamentos</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="tab-content div-duvida" id="v-pills-tabContent">
+                        <div class="tab-pane fade show" [ngClass]="{active: editForm === 'edit1'}" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            Você pode comprar pelo site na aba de flores e fazer seu pedido. Para contato, temos nossa aba de <a href="/contato">Contato</a>
+                        </div>
+                        <div class="tab-pane fade show" [ngClass]="{active: editForm === 'edit2'}" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            A Flower Stak foi fundada em 2021 por três apaixonados donos. Nossa floricultura funciona apenas na Baixada Santista, sendo a única a ofertar nosso sistema de buquês personalizados!
+                            <br><br> Por sermos uma empresa nova, apenas funcionamos com 1 loja física, sendo nosso local de retirada. Ela funciona na Avenida Ana Costa, N°277<br><br> Aqui você pode usar seu cartão sem medo, suas informações são protegidas
+                            por nossos sistemas de criptografia, onde inibe os ataques às suas informações.<br><br> Nosso sistema é tão rápido que conseguimos atender 90% de nossas solicitações em até 30 minutos. Mas tudo isso só é possível com uma equipe
+                            que ama o que faz, isso é uma das partes principais para que sua flor chegue na melhor qualidade em sua casa.
+                        </div>
+                        <div class="tab-pane fade show" [ngClass]="{active: editForm === 'edit3'}" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                            Temos nossa aba de <a href="/contato">Contato</a> ou então nosso e-mail ou WhastApp localizado no rodapé da página.
+                        </div>
+                        <div class="tab-pane fade show" [ngClass]="{active: editForm === 'edit4'}" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                            <br>Atualmente trabalhamos com cartões de débito e crédito e dinheiro caso for para retirada.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

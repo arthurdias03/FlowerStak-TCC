@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    height: auto;
+    min-height: 800px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.titulos-taman {
+    font-size: 26px;
+}
+
+.btn-cadast {
+    border: solid transparent;
+    color: black;
+    border-radius: 5px;
+    background-color: green;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.btn-cadast:hover {
+    border: solid transparent;
+    border-radius: 5px;
+    color: black;
+    background-color: rgb(22, 196, 39);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.mat-dialog-container {
+    margin: 0px;
+    padding: 0px;
+}
+
+.custom-dialog-container .mat-dialog-container {
+    padding: 0px;
+    border: none;
+    margin: 0px;
+}
+
+dialog {
+    border: none !important;
+}
+
+mat-dialog-container {
+    border: none !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    background-color: white !important;
+    color: white !important;
+}
+
+.mat-grid-tile-content {
+    align-items: start !important;
+}

@@ -1,0 +1,89 @@
+main {
+    margin-top: 150px;
+}
+
+#posicaomenu {
+    position: absolute;
+    margin-top: 7px;
+    border: solid 2px #000;
+    border-radius: 7px;
+}
+
+.menu-flores {
+    position: relative;
+    color: #000;
+}
+
+.menu-flores:hover {
+    background-color: rgb(231, 105, 105);
+    color: #000;
+}
+
+#ColumnText {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 768px) {
+    #ColumnText {
+        display: flex;
+        flex-direction: column !important;
+    }
+}
+
+.menu-endereços {
+    margin-top: 80px;
+}
+
+.menu-endereco {
+    margin-top: 20px;
+}
+
+.h2enderecos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.borda-menu {
+    background-color: white;
+}
+
+.posicaocheckbox {
+    text-align: center;
+}
+
+.h2posicao {
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+footer {
+    margin-top: 200px;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+
+input {
+    float: none;
+}
+
+.btnfinalizar {
+    border-radius: 10px;
+}
+
+.h2checkbox {
+    text-align: center;
+}
+
+.h6compras {
+    margin-left: 30px;
+}
+
+button {
+    background-color: green;
+}
+
+.h2carrinho {
+    padding-bottom: 10px;
+}

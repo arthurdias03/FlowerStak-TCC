@@ -1,0 +1,107 @@
+<body style="height: auto">
+    <ngb-carousel>
+        <ng-template ngbSlide class='carousel-item'>
+            <div class="img-fluid">
+                <img [src]="imagepath1" alt="foto1" class="img-fluid d-block">
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+                <h3>10 seconds between slides...</h3>
+                <p>This carousel uses customized default values.</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide class='carousel-item'>
+            <div class="img-fluid">
+                <img [src]="imagepath2" alt="foto2" class="img-fluid d-block">
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+                <h3>No mouse events...</h3>
+                <p>This carousel doesn't pause or resume on mouse events</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide class='carousel-item'>
+            <div class="img-fluid">
+                <img [src]="imagepath3" alt="foto3" class="img-fluid d-block">
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+                <h3>No keyboard...</h3>
+                <p>This carousel uses customized default values.</p>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+    <section class=" justify-content-center" style="border-radius: 20px;">
+        <div class="mb-5 container justify-content-center text-center shadow-lg shadow " style="background-color: #fff; border-radius: 20px;margin-top:70px;">
+            <h3 id="h3florvend " class="titulos-taman" style="margin-bottom: 30px;">FLORES MAIS VENDIDAS</h3>
+            <div class="row">
+                <div class="col">
+                    <h5>ROSAS</h5>
+                    <img src="/assets/images/paginainicial/rosas.png" alt="rosa" style="width: 200px; height: 232px; object-fit: cover;">
+                </div>
+                <div class="col">
+                    <h5>MARGARIDAS</h5>
+                    <img src="/assets/images/paginainicial/margaridas.png" alt="margaridas" style="width: 200px; height: 232px; object-fit: cover;">
+                </div>
+                <div class="col">
+                    <H5>GIRASSÓIS</H5>
+                    <img src="/assets/images/paginainicial/girassol.png" alt="GIRASSÓIS" style="width: 200px; height: 232px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--cards-->
+    <main class="align-items-center justify-content-center" style="width: 100%;">
+        <div class="container margin-cards align-items-center flex-md-wrap justify-content-center">
+            <div class="c-card__image row justify-content-between" style="width: 100%;">
+                <div class="card mb-3" style="padding: 0 !important; width: 18rem;border-radius: 30px;" *ngFor="let item of itens">
+                    <img class="card-img-top" src="{{item.imgpath}}" alt="rosas" style="width: 286px; height: 180px; object-fit: cover;border-radius:30px 30px 0px 0px;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.nome}}</h5>
+                        <p class="card-text">{{item.valor}}
+                        </p>
+                        <div>
+                            <a href="#" class="svg-card"> <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                  <path
+                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                  <path
+                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-card__content">
+                    <span class="u-text-placeholder" style="width:30%"></span>
+                    <span class="u-text-placeholder" style="width:85%"></span>
+                    <span class="u-text-placeholder" style="width:60%"></span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--sobre nos-->
+    <div class="margin ">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <hr id="hr1">
+                    <h1>A Flower Stak</h1>
+
+                </div>
+                <div class="col-md-6">
+                    <img src="/assets/images/paginainicial/floriculturaabout.jpeg" class="img-fluid" alt="floricultura" style="border-radius:7px;">
+                </div>
+
+                <div class="col-md-6">
+                    <h3 style="margin-top: 20px;">Uma floricultura feita pra você</h3>
+                    <p class="about-p">Somos um time de profissionais que almejam o melhor para o nosso cliente</p>
+                    <P class="about-p">Nossas flores são colhidas e selecionadas diariamente para chegar na sua casa perfeita
+                    </P>
+                    <p class="about-p">Ainda não temos franquia,mas temos uma loja fisica localizada em Santos-sp!</p>
+                    <p class="about-p">Endereço: av.Ana Costa,556</p>
+                    <p class="about-p">Tel:3245-7689</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>

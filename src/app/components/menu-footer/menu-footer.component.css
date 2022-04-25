@@ -1,0 +1,29 @@
+.li-footer {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+
+  text-decoration: none;
+}
+.li-footer:hover {
+  color: rgb(204, 204, 204);
+}
+
+.li-footerMenu {
+  list-style: none;
+}
+
+.li-footer2:hover {
+  color: red;
+}
+.p-footer2 {
+  font-size: 18px;
+}
+.redes-footer {
+  display: inline;
+  margin: 0 10px;
+}
+footer {
+  background-color: #4d7a20;
+  background: 0.6;
+}

@@ -1,0 +1,45 @@
+.marginform {
+    margin-top: 30px;
+}
+
+.padding-adms-contato {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.a-contato {
+    color: #000;
+    font-size: 18px;
+}
+
+.a-contato:hover {
+    color: #FD5252;
+}
+
+@media only screen and (max-width: 600px) {
+    .bodyContainer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .bodyContainer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.btn-pag {
+    border: solid 1px #66ec61;
+    border-radius: 20px;
+}
+
+.btn-pag:hover {
+    background-color: #3c9738;
+}

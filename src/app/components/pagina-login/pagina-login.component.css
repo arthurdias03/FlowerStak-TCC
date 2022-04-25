@@ -1,0 +1,34 @@
+.container-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-login {
+    background-image: url('../../../assets/images/paginalogin/flowersloginPNG.png');
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1280px) {
+    .background-login {
+        background-image: none;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.box {
+    margin-top: 100px;
+    background: #fff;
+    border-radius: 40px;
+    padding-bottom: 30px;
+    margin-bottom: 300px;
+}
+
+.boxcad {
+    background: #fff;
+    border-radius: 40px;
+}
